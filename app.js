@@ -15,6 +15,8 @@ const seven = document.querySelector(".seven");
 const eight = document.querySelector(".eight");
 const nine = document.querySelector(".nine");
 const deleteButton = document.querySelector(".delete");
+const plus = document.querySelector(".plus");
+const equals = document.querySelector(".equals");
 
 
 
@@ -83,6 +85,25 @@ deleteButton.addEventListener( "click", () => {
      let cutoff = displayString.slice(0,-1);   
      screen.value = cutoff;
  })
+
+ let sumA = screen.value 
+
+ plus.addEventListener("click", () => {
+    screen.value += "+";
+})
+
+equals.addEventListener("click", () => {
+    let currentValue = screen.value;
+    let currentValue2Number = Number(currentValue);
+
+    console.log(currentValue2Number);
+})
+
+
+
+console.log(sumA);
+
+
 
 
 

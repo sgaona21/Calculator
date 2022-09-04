@@ -17,21 +17,43 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    background-color: whitesmoke;
-}
-
-button {
-   
+    background-image: linear-gradient(rgb(99, 99, 99), rgb(36, 36, 36));
 }
 
 #screen {
     grid-column-start: 1;
     grid-column-end: 5;
+    font-size: 3rem;
+    text-align: right;
+    letter-spacing: 1px;
+}
 
+button, input {
+    border-radius: 10px;
+    border: none;
+    margin: .25rem;
+}
+
+.buttons {
+    color: white;
+    font-size: 2rem;
+    background-image: linear-gradient(rgb(56, 56, 56), black);
+    border: 1px solid black;
+}
+
+button:hover {
+    cursor: pointer;
+    border: gray 2px solid;
+}
+
+.c, .positive-negative, .division, .multiply, .minus, .plus {
+    background-image: linear-gradient(sandybrown, saddlebrown);
 }
 
 .equals {
     grid-row-start: 5;
     grid-row-end: 7;
     grid-column-start: 4;
+    background-image: linear-gradient(rgb(247, 175, 43), darkorange);
 }
+

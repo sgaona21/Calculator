@@ -19,6 +19,8 @@ const deleteButton = document.querySelector(".delete");
 const plus = document.querySelector(".plus");
 const equals = document.querySelector(".equals");
 const multiply = document.querySelector(".multiply");
+const division = document.querySelector(".division");
+const minus = document.querySelector(".minus");
 
 
 
@@ -81,11 +83,6 @@ clear.addEventListener("click", () => {
     screen.value = "";
 })
 
-
-
-
-
-
 deleteButton.addEventListener( "click", () => {
      let display = screen.value;
      let displayString = display.toString();
@@ -94,7 +91,7 @@ deleteButton.addEventListener( "click", () => {
  })
 
 
- plus.addEventListener("click", () => {
+plus.addEventListener("click", () => {
     screen.value += "+";
 })
 
@@ -102,25 +99,31 @@ multiply.addEventListener("click", () => {
     screen.value += "x";
 })
 
+division.addEventListener("click", () => {
+    screen.value += "/";
+})
+
+minus.addEventListener("click", () => {
+    screen.value += "-";
+})
+
 equals.addEventListener("click", () => {
     let value2String = screen.value.toString();
     let splitByAddition = value2String.split("+");
     let splitByMultiplication = value2String.split("x");
+    let splitByDivision = value2String.split("/");
+    let splitBySubtraction = value2String.split("-");
     if (value2String.includes("+")) {
         screen.value = parseInt(splitByAddition[0]) + parseInt(splitByAddition[1]);
     } else if (value2String.includes("x")) {
         screen.value = parseInt(splitByMultiplication[0]) * parseInt(splitByMultiplication[1]);
+    } else if (value2String.includes("/")) {
+        screen.value = parseInt(splitByDivision[0]) / parseInt(splitByDivision[1]);
+    } else if (value2String.includes("-")) {
+        screen.value = parseInt(splitBySubtraction[0]) - parseInt(splitBySubtraction[1]);
     }
-    console.log(splitByAddition);
-})
+});
 
-
-
-function solution() {
-
-}
-
-console.log(screen.value);
 
 
 

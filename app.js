@@ -75,7 +75,11 @@ zero.addEventListener( "click", () => {
 })
 
 period.addEventListener( "click", () => {
-    screen.value += ".";
+    if (screen.value.includes(".")) {
+
+    } else {
+        screen.value += ".";
+    }
 })
 
 
@@ -97,7 +101,18 @@ deleteButton.addEventListener( "click", () => {
  })
 
 plus.addEventListener("click", () => {
-    screen.value += "+";
+    let value2String = screen.value.toString();
+    if (value2String.includes("/")) {
+
+    } else if (value2String.includes("+")) {
+        
+    } else if (value2String.includes("x")) {
+
+    } else if (value2String.includes("-")) {
+
+    } else {
+        screen.value += "+";
+    }
 })
 
 multiply.addEventListener("click", () => {

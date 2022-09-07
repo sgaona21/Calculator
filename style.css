@@ -17,7 +17,7 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    background-image: linear-gradient(rgb(99, 99, 99), rgb(36, 36, 36));
+    background-color: rgb(20, 20, 20);
     padding: 1rem;
     border-radius: 20px;
 }
@@ -28,6 +28,7 @@ main {
     font-size: 3rem;
     text-align: right;
     letter-spacing: 1px;
+    background-color: whitesmoke;
 }
 
 button, input {
@@ -49,13 +50,19 @@ button:hover {
 }
 
 .c, .positive-negative, .division, .multiply, .minus, .plus {
-    background-image: linear-gradient(sandybrown, saddlebrown);
+    background-image: linear-gradient(rgb(150, 150, 150), rgb(90, 90, 90));
 }
 
 .equals {
     grid-row-start: 5;
     grid-row-end: 7;
     grid-column-start: 4;
-    background-image: linear-gradient(rgb(247, 175, 43), darkorange);
+    background-image: linear-gradient(rgb(107, 184, 107), green);
 }
+
+#clear {
+    background-image: linear-gradient(rgba(238, 39, 39, 0.925), rgba(196, 0, 0, 0.911));
+}
+
+
 

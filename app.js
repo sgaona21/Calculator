@@ -18,6 +18,7 @@ const zero = document.querySelector(".zero");
 const deleteButton = document.querySelector(".delete");
 const plus = document.querySelector(".plus");
 const equals = document.querySelector(".equals");
+const multiply = document.querySelector(".multiply");
 
 
 
@@ -97,13 +98,20 @@ deleteButton.addEventListener( "click", () => {
     screen.value += "+";
 })
 
+multiply.addEventListener("click", () => {
+    screen.value += "x";
+})
+
 equals.addEventListener("click", () => {
     let value2String = screen.value.toString();
-    let splitUp = value2String.split("+");
+    let splitByAddition = value2String.split("+");
+    let splitByMultiplication = value2String.split("x");
     if (value2String.includes("+")) {
-        screen.value = parseInt(splitUp[0]) + parseInt(splitUp[1]);
+        screen.value = parseInt(splitByAddition[0]) + parseInt(splitByAddition[1]);
+    } else if (value2String.includes("x")) {
+        screen.value = parseInt(splitByMultiplication[0]) * parseInt(splitByMultiplication[1]);
     }
-    console.log(splitUp);
+    console.log(splitByAddition);
 })
 
 

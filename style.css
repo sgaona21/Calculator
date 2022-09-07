@@ -18,6 +18,8 @@ main {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     background-image: linear-gradient(rgb(99, 99, 99), rgb(36, 36, 36));
+    padding: 1rem;
+    border-radius: 20px;
 }
 
 #screen {

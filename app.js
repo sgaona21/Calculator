@@ -21,6 +21,7 @@ const equals = document.querySelector(".equals");
 const multiply = document.querySelector(".multiply");
 const division = document.querySelector(".division");
 const minus = document.querySelector(".minus");
+const period = document.querySelector(".period");
 
 
 
@@ -29,7 +30,6 @@ const minus = document.querySelector(".minus");
 // *****NUMBERS*****
 // *****NUMBERS*****
 // *****NUMBERS*****
-
 one.addEventListener( "click", () => {
     screen.value += 1;
 })
@@ -74,11 +74,17 @@ zero.addEventListener( "click", () => {
     screen.value += 0;
 })
 
+period.addEventListener( "click", () => {
+    screen.value += ".";
+})
 
 
 
 
 
+// *****OPERATORS*****
+// *****OPERATORS*****
+// *****OPERATORS*****
 clear.addEventListener("click", () => {
     screen.value = "";
 })
@@ -89,7 +95,6 @@ deleteButton.addEventListener( "click", () => {
      let cutoff = displayString.slice(0,-1);   
      screen.value = cutoff;
  })
-
 
 plus.addEventListener("click", () => {
     screen.value += "+";

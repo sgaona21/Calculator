@@ -14,6 +14,7 @@ const six = document.querySelector(".six");
 const seven = document.querySelector(".seven");
 const eight = document.querySelector(".eight");
 const nine = document.querySelector(".nine");
+const zero = document.querySelector(".zero");
 const deleteButton = document.querySelector(".delete");
 const plus = document.querySelector(".plus");
 const equals = document.querySelector(".equals");
@@ -25,6 +26,7 @@ const equals = document.querySelector(".equals");
 // *****NUMBERS*****
 // *****NUMBERS*****
 // *****NUMBERS*****
+
 one.addEventListener( "click", () => {
     screen.value += 1;
 })
@@ -65,6 +67,10 @@ nine.addEventListener( "click", () => {
     screen.value += 9;
 })
 
+zero.addEventListener( "click", () => {
+    screen.value += 0;
+})
+
 
 
 
@@ -86,22 +92,27 @@ deleteButton.addEventListener( "click", () => {
      screen.value = cutoff;
  })
 
- let sumA = screen.value 
 
  plus.addEventListener("click", () => {
     screen.value += "+";
 })
 
 equals.addEventListener("click", () => {
-    let currentValue = screen.value;
-    let currentValue2Number = Number(currentValue);
-
-    console.log(currentValue2Number);
+    let value2String = screen.value.toString();
+    let splitUp = value2String.split("+");
+    if (value2String.includes("+")) {
+        screen.value = parseInt(splitUp[0]) + parseInt(splitUp[1]);
+    }
+    console.log(splitUp);
 })
 
 
 
-console.log(sumA);
+function solution() {
+
+}
+
+console.log(screen.value);
 
 
 

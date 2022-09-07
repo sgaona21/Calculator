@@ -6,7 +6,7 @@ console.log("script linked");
 const one = document.querySelector(".one");
 const screen = document.getElementById("screen");
 const clear = document.querySelector(".c");
-const two = document.getElementsByClassName('two');
+const two = document.querySelector(".two");
 const three = document.querySelector(".three");
 const four = document.querySelector(".four");
 const five = document.querySelector(".five");
@@ -38,7 +38,7 @@ clear.addEventListener("click", () => {
     screen.value = "";
 })
 
-two[0].addEventListener("click", () => {
+two.addEventListener("click", () => {
     screen.value += 2;
 })
 
@@ -110,21 +110,62 @@ plus.addEventListener("click", () => {
 
     } else if (value2String.includes("-")) {
 
+    } else if (screen.value === "") {
+
     } else {
         screen.value += "+";
     }
 })
 
 multiply.addEventListener("click", () => {
-    screen.value += "x";
+    let value2String = screen.value.toString();
+    if (value2String.includes("/")) {
+
+    } else if (value2String.includes("+")) {
+        
+    } else if (value2String.includes("x")) {
+
+    } else if (value2String.includes("-")) {
+
+    } else if (screen.value === "") {
+
+    } else {
+        screen.value += "x";
+    }
 })
 
 division.addEventListener("click", () => {
-    screen.value += "/";
+    let value2String = screen.value.toString();
+    if (value2String.includes("/")) {
+
+    } else if (value2String.includes("+")) {
+        
+    } else if (value2String.includes("x")) {
+
+    } else if (value2String.includes("-")) {
+
+    } else if (screen.value === "") {
+
+    } else {
+        screen.value += "/";
+    }
 })
 
 minus.addEventListener("click", () => {
-    screen.value += "-";
+    let value2String = screen.value.toString();
+    if (value2String.includes("/")) {
+
+    } else if (value2String.includes("+")) {
+        
+    } else if (value2String.includes("x")) {
+
+    } else if (value2String.includes("-")) {
+
+    } else if (screen.value === "") {
+
+    } else {
+        screen.value += "-";
+    }
 })
 
 equals.addEventListener("click", () => {
@@ -143,8 +184,6 @@ equals.addEventListener("click", () => {
         screen.value = parseInt(splitBySubtraction[0]) - parseInt(splitBySubtraction[1]);
     }
 });
-
-
 
 
 

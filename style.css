@@ -49,7 +49,7 @@ button:hover {
     border: gray 2px solid;
 }
 
-.c, .positive-negative, .division, .multiply, .minus, .plus {
+.c, .negative, .division, .multiply, .minus, .plus {
     background-image: linear-gradient(rgb(150, 150, 150), rgb(70, 70, 70));
 }
 

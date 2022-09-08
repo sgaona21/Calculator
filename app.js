@@ -22,6 +22,8 @@ const multiply = document.querySelector(".multiply");
 const division = document.querySelector(".division");
 const minus = document.querySelector(".minus");
 const period = document.querySelector(".period");
+const negative = document.querySelector(".negative");
+
 
 
 
@@ -99,6 +101,11 @@ deleteButton.addEventListener( "click", () => {
      let cutoff = displayString.slice(0,-1);   
      screen.value = cutoff;
  })
+
+ negative.addEventListener( "click", () => {
+    
+})
+
 
 plus.addEventListener("click", () => {
     let value2String = screen.value.toString();

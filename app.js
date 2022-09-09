@@ -98,11 +98,7 @@ period.addEventListener( "click", () => {
 
      } else if (decimalCounter === 2) {
 
-    } else if (!parseFloat(splitByAddition[0].includes(".")) & decimalCounter ===1) {
-
-    } else if (parseFloat(splitByAddition[0].includes(".")) & decimalCounter === 1) {
-
-    } else {
+    }  else {
         screen.value += ".";
     }
 } );

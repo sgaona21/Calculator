@@ -25,6 +25,12 @@ const minus = document.querySelector(".minus");
 const period = document.querySelector(".period");
 const negative = document.querySelector(".negative");
 
+let value2String = screen.value.toString();
+let splitByAddition = value2String.split("+");
+let splitByMultiplication = value2String.split("x");
+let splitByDivision = value2String.split("/");
+let splitBySubtraction = value2String.split("-");
+
 
 
 
@@ -35,7 +41,6 @@ const negative = document.querySelector(".negative");
 // *****NUMBERS*****
 one.addEventListener( "click", () => {
     screen.value += 1;
-    console.log(screen.value.length)
 })
 
 clear.addEventListener("click", () => {
@@ -87,14 +92,17 @@ period.addEventListener( "click", () => {
             decimalCounter = decimalCounter + 1;
         }
     }
-    console.log(decimalCounter);
     if (lastChar === ".") {
         
-    } else if (screen.value.includes(".") & !screen.value.includes("+")) {
-        
-     }  else if (decimalCounter >= 2) {
+    }  else if (currentString.includes(".") & !currentString.includes("+") & !currentString.includes("-") & !currentString.includes("x") & !currentString.includes("/")) {
 
-     } else {
+     } else if (decimalCounter === 2) {
+
+    } else if (!parseFloat(splitByAddition[0].includes(".")) & decimalCounter ===1) {
+
+    } else if (parseFloat(splitByAddition[0].includes(".")) & decimalCounter === 1) {
+
+    } else {
         screen.value += ".";
     }
 } );

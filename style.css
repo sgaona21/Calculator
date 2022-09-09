@@ -74,7 +74,7 @@ button, #screen-container {
 
 button:hover {
     cursor: pointer;
-    border: gray 2px solid;
+    border: white 2px solid;
 }
 
 .c, .negative, .division, .multiply, .minus, .plus {

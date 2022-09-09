@@ -16,22 +16,45 @@ main {
     width: 400px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1.5fr 1fr 1fr 1fr 1fr 1fr;
     background-color: rgb(20, 20, 20);
     padding: 1rem;
     border-radius: 20px;
 }
 
 #screen {
-    grid-column-start: 1;
-    grid-column-end: 5;
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: right;
     letter-spacing: 1px;
     background-color: whitesmoke;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    height: 90%;
+    padding-top: 2rem;
 }
 
-button, input {
+#screen-container {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    position: relative;
+}
+
+#mini-screen {
+    position: absolute;
+    border: none;
+    top: 0;
+    right: 5px;
+    text-align: right;
+    height: 30%;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    font-size: 1.255rem;
+    /* font-weight: bold; */
+}
+
+
+button, #screen-container {
     border-radius: 10px;
     border: none;
     margin: .25rem;

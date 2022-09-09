@@ -20,6 +20,7 @@ main {
     background-color: rgb(20, 20, 20);
     padding: 1rem;
     border-radius: 20px;
+    margin: 1rem;
 }
 
 #screen {

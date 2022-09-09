@@ -35,7 +35,6 @@ const negative = document.querySelector(".negative");
 // *****NUMBERS*****
 one.addEventListener( "click", () => {
     screen.value += 1;
-    console.log(screen.value);
 })
 
 clear.addEventListener("click", () => {

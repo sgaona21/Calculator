@@ -35,6 +35,7 @@ const negative = document.querySelector(".negative");
 // *****NUMBERS*****
 one.addEventListener( "click", () => {
     screen.value += 1;
+    console.log(screen.value.length)
 })
 
 clear.addEventListener("click", () => {
@@ -79,13 +80,21 @@ zero.addEventListener( "click", () => {
 
 period.addEventListener( "click", () => {
     let lastChar = screen.value.charAt(screen.value.length - 1);
+    let decimalCounter = 0;
+    for (i=0; i < screen.value.length; i++) {
+        if (i === ".") {
+        decimalCounter ++;
+        console.log(decimalCounter);
+        } 
+    }
     if (lastChar === ".") {
         
-    } else {
+    } else if (screen.value.includes(".") & !screen.value.includes("+")) {
+        
+     } else {
         screen.value += '.';
     }
-
-})
+} );
 
 
 

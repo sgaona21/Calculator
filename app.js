@@ -35,6 +35,7 @@ const negative = document.querySelector(".negative");
 // *****NUMBERS*****
 one.addEventListener( "click", () => {
     screen.value += 1;
+    console.log(screen.value);
 })
 
 clear.addEventListener("click", () => {
@@ -183,13 +184,13 @@ equals.addEventListener("click", () => {
     let splitByDivision = value2String.split("/");
     let splitBySubtraction = value2String.split("-");
     if (value2String.includes("+")) {
-        screen.value = parseInt(splitByAddition[0]) + parseInt(splitByAddition[1]);
+        screen.value = parseFloat(splitByAddition[0]) + parseFloat(splitByAddition[1]);
     } else if (value2String.includes("x")) {
-        screen.value = parseInt(splitByMultiplication[0]) * parseInt(splitByMultiplication[1]);
+        screen.value = parseFloat(splitByMultiplication[0]) * parseFloat(splitByMultiplication[1]);
     } else if (value2String.includes("/")) {
-        screen.value = parseInt(splitByDivision[0]) / parseInt(splitByDivision[1]);
+        screen.value = parseFloat(splitByDivision[0]) / parseFloat(splitByDivision[1]);
     } else if (value2String.includes("-")) {
-        screen.value = parseInt(splitBySubtraction[0]) - parseInt(splitBySubtraction[1]);
+        screen.value = parseFloat(splitBySubtraction[0]) - parseFloat(splitBySubtraction[1]);
     }
 });
 

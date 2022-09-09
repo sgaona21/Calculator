@@ -79,11 +79,13 @@ zero.addEventListener( "click", () => {
 })
 
 period.addEventListener( "click", () => {
-    if (screen.value.includes(".")) {
-
+    let lastChar = screen.value.charAt(screen.value.length - 1);
+    if (lastChar === ".") {
+        
     } else {
-        screen.value += ".";
+        screen.value += '.';
     }
+
 })
 
 
@@ -104,7 +106,7 @@ deleteButton.addEventListener( "click", () => {
      screen.value = cutoff;
  })
 
- negative.addEventListener( "click", () => {
+negative.addEventListener( "click", () => {
     
 })
 

@@ -5,6 +5,7 @@ console.log("script linked");
 // *****VARIABLES*****
 const one = document.querySelector(".one");
 const screen = document.getElementById("screen");
+const miniScreen = document.getElementById("mini-screen");
 const clear = document.querySelector(".c");
 const two = document.querySelector(".two");
 const three = document.querySelector(".three");

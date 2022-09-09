@@ -81,18 +81,21 @@ zero.addEventListener( "click", () => {
 period.addEventListener( "click", () => {
     let lastChar = screen.value.charAt(screen.value.length - 1);
     let decimalCounter = 0;
-    for (i=0; i < screen.value.length; i++) {
-        if (i === ".") {
-        decimalCounter ++;
-        console.log(decimalCounter);
-        } 
+    let currentString = screen.value;
+    for (i = 0; i <currentString.length; i++) {
+        if (currentString.charAt(i) === ".") {
+            decimalCounter = decimalCounter + 1;
+        }
     }
+    console.log(decimalCounter);
     if (lastChar === ".") {
         
     } else if (screen.value.includes(".") & !screen.value.includes("+")) {
         
+     }  else if (decimalCounter >= 2) {
+
      } else {
-        screen.value += '.';
+        screen.value += ".";
     }
 } );
 
@@ -203,7 +206,6 @@ equals.addEventListener("click", () => {
         screen.value = parseFloat(splitBySubtraction[0]) - parseFloat(splitBySubtraction[1]);
     }
 });
-
 
 
 

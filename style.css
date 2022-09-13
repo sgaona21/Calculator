@@ -85,7 +85,7 @@ button:hover {
     grid-row-start: 5;
     grid-row-end: 7;
     grid-column-start: 4;
-    background-image: linear-gradient(rgb(107, 184, 107), green);
+    background-image: linear-gradient(rgb(81, 150, 81), green);
 }
 
 #clear {

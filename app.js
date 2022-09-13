@@ -122,7 +122,15 @@ deleteButton.addEventListener( "click", () => {
  })
 
 negative.addEventListener( "click", () => {
-    
+    let numberValue = parseFloat(screen.value);
+    if (screen.value === 0) {
+
+    } else if (Math.sign(numberValue) === 1) {
+        screen.value = numberValue * -1;
+    } else if (Math.sign(numberValue) === -1) { 
+        screen.value = numberValue * -1;
+    }
+
 })
 
 

@@ -136,12 +136,15 @@ negative.addEventListener( "click", () => {
 
 plus.addEventListener("click", () => {
     let value2String = screen.value.toString();
+    let firstChar = value2String.charAt(0);
     if (value2String.includes("/")) {
 
     } else if (value2String.includes("+")) {
         
     } else if (value2String.includes("x")) {
 
+    } else if (firstChar === "-") {
+        screen.value += "+";
     } else if (value2String.includes("-")) {
 
     } else if (screen.value === "") {

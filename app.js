@@ -156,10 +156,13 @@ plus.addEventListener("click", () => {
 
 multiply.addEventListener("click", () => {
     let value2String = screen.value.toString();
+    let firstChar = value2String.charAt(0);
     if (value2String.includes("/")) {
 
     } else if (value2String.includes("+")) {
         
+    } else if (firstChar === "-") {
+        screen.value += "x";
     } else if (value2String.includes("x")) {
 
     } else if (value2String.includes("-")) {
@@ -173,7 +176,10 @@ multiply.addEventListener("click", () => {
 
 division.addEventListener("click", () => {
     let value2String = screen.value.toString();
-    if (value2String.includes("/")) {
+    let firstChar = value2String.charAt(0);
+    if (firstChar === "-") {
+        screen.value += "/";
+    } else if (value2String.includes("/")) {
 
     } else if (value2String.includes("+")) {
         
@@ -190,12 +196,15 @@ division.addEventListener("click", () => {
 
 minus.addEventListener("click", () => {
     let value2String = screen.value.toString();
+    let firstChar = value2String.charAt(0);
     if (value2String.includes("/")) {
 
     } else if (value2String.includes("+")) {
         
     } else if (value2String.includes("x")) {
 
+    } else if (firstChar === "-") {
+        screen.value += "-";
     } else if (value2String.includes("-")) {
 
     } else if (screen.value === "") {

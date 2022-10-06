@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main {
+    height: 550px;
+    width: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1.5fr 1fr 1fr 1fr 1fr 1fr;
+    background-color: rgb(20, 20, 20);
+    padding: 1rem;
+    border-radius: 20px;
+    margin: 1rem;
+}
+
+#screen {
+    font-size: 2.5rem;
+    text-align: right;
+    letter-spacing: 1px;
+    background-color: whitesmoke;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    height: 90%;
+    padding-top: 2rem;
+}
+
+#screen-container {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    position: relative;
+}
+
+#mini-screen {
+    position: absolute;
+    border: none;
+    top: 0;
+    right: 5px;
+    text-align: right;
+    height: 30%;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    font-size: 1.255rem;
+}
+
+#mini-screen:focus, #screen:focus {
+    border: none;
+    outline: none;
+}
+
+
+button, #screen-container {
+    border-radius: 10px;
+    border: none;
+    margin: .25rem;
+}
+
+.buttons {
+    color: white;
+    font-size: 2rem;
+    background-image: linear-gradient(rgb(56, 56, 56), black);
+    border: 1px solid black;
+}
+
+button:hover {
+    cursor: pointer;
+    border: white 2px solid;
+}
+
+.c, .negative, .division, .multiply, .minus, .plus {
+    background-image: linear-gradient(rgb(150, 150, 150), rgb(70, 70, 70));
+}
+
+.equals {
+    grid-row-start: 5;
+    grid-row-end: 7;
+    grid-column-start: 4;
+    background-image: linear-gradient(rgb(107, 184, 107), green);
+}
+
+#clear {
+    background-image: linear-gradient(rgba(238, 39, 39, 0.925), rgba(196, 0, 0, 0.911));
+}
+
+
+
